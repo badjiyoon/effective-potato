@@ -1,0 +1,1 @@
+typeperf "\process(iexplore*)\% Processor Time" "\processor(_Total)\% Processor Time" "\process(iexplore*)\Working Set - Private" "\memory\Available Bytes" -si 5 -o C:\automation-test\testcase\KDNLoopTest\MemoryResult\localperf.csv

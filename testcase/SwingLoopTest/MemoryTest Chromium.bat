@@ -1,0 +1,1 @@
+typeperf "\process(chrome*)\% Processor Time" "\processor(_Total)\% Processor Time" "\process(chrome*)\Working Set - Private" "\memory\Available Bytes" -si 5 -o C:\AutoMationTestFramework\SimpleRobotFrameWorkServer\public\TestResult\localperf.csv

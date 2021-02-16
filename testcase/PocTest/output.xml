@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180307 17:35:49.253" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\W-Tester\testcase\PocTest\T0403.robot" id="s1" name="T0403">
+<test id="s1-t1" name="[TC-001]-Launching the browser and search and launch the 'inswave' Application">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180307 17:35:49.638" level="INFO">Opening browser 'chrome' to base url 'http://poc.inswave.com/websquare/websquare.html?w2xPath=/template/index_tabcontrol_new.xml'.</msg>
+<status status="PASS" endtime="20180307 17:35:58.191" starttime="20180307 17:35:49.638"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180307 17:35:59.343" starttime="20180307 17:35:58.191"></status>
+</kw>
+<status status="PASS" endtime="20180307 17:35:59.343" starttime="20180307 17:35:49.637"></status>
+</kw>
+<kw name="Search Application On Google">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>D:\\W-Tester\\testcase\\PocTest/T0404.js</arg>
+</arguments>
+<msg timestamp="20180307 17:35:59.348" html="yes" level="INFO">Reading JavaScript from file &lt;a href="file://%s"&gt;%s&lt;/a&gt;.</msg>
+<msg timestamp="20180307 17:35:59.350" level="INFO">Executing JavaScript:
+var timer_index = 0;
+var timer_timeset = 5000;
+function myLoop (){
+	var timeder_id = setTimeout(function(){
+	timer_index++;
+	timer_timeset=5000;
+	if (timer_index == 1) {
+		tw_menu_label_2.click();
+	}else if(timer_index == 2){
+		tw_menu_label_5.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 3){
+		tw_menu_label_6.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 4){
+		tw_menu_label_7.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 5){
+		tw_menu_label_8.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 6){
+		tw_menu_label_9.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 7){
+		tw_menu_label_10.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 8){
+		tw_menu_label_11.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 9){
+		tw_menu_label_12.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 10){
+		tw_menu_label_14.click();
+	}else if(timer_index == 11){
+		tw_menu_label_16.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+		timer_timeset=5000;
+	}else if(timer_index == 12){
+		tw_menu_label_18.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 13){
+		tw_menu_label_20.click();
+	}else if(timer_index == 14){
+		tw_menu_label_21.click();
+	}else if(timer_index == 15){
+		tw_menu_label_22.click();
+	}else if(timer_index == 16){
+		anc_tabClose.click();
+	}else if(timer_index == 17){
+		timer_index=0;
+		jQuery.cache = {};
+	}myLoop();
+	}, timer_timeset)
+}myLoop();</msg>
+<status status="PASS" endtime="20180307 17:36:00.645" starttime="20180307 17:35:59.346"></status>
+</kw>
+<status status="PASS" endtime="20180307 17:36:00.646" starttime="20180307 17:35:59.345"></status>
+</kw>
+<status status="PASS" endtime="20180307 17:36:00.647" critical="yes" starttime="20180307 17:35:49.635"></status>
+</test>
+<status status="PASS" endtime="20180307 17:36:00.653" starttime="20180307 17:35:49.259"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="T0403" pass="1">T0403</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

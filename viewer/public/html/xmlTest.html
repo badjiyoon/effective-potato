@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/javascripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var arr = [];
+        $.ajax({
+            type: "GET"
+            ,dataType: "xml"
+            ,url: "/result/2017-02-07115412/output.xml"
+            ,success: function(xml){
+                var xmlData = $(xml).find("msg");
+                var listLength = xmlData.length;
+				var logdata="";
+				var incrementdata="";
+				var i = 0;
+				if (listLength) {
+					var html = [];
+                    $(xmlData).each(function(index){
+					debugger;
+						if(xmlData[index].textContent.indexOf("${log}") != -1) {
+						    logdata = xmlData[index].textContent.toString();
+							console.log(i + logdata.substring(18, 53));
+							html.push(i + logdata.substring(18, 53));
+							i++;
+						}						
+                    });
+					
+					document.getElementById('data').innerHTML = html.join("</br>");
+                }
+            }
+        });
+    });
+	</script>
+</head>
+<body>
+<div id="data"></div>
+</body>
+</html>

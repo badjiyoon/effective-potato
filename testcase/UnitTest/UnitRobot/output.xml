@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180306 13:57:16.153" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\W-Tester2\testcase\UnitTest\UnitRobot\wframe_all.robot" id="s1" name="Wframe All">
+<test id="s1-t1" name="[TC-001]-Launching the browser and search and launch the 'inswave' Application">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180306 13:57:25.094" level="INFO">Opening browser 'chrome' to base url 'http://poc.inswave.com/websquare/websquare.html?w2xPath=/template/index_tabcontrol_new.xml'.</msg>
+<status status="PASS" endtime="20180306 13:57:33.604" starttime="20180306 13:57:25.093"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180306 13:57:37.873" starttime="20180306 13:57:33.604"></status>
+</kw>
+<status status="PASS" endtime="20180306 13:57:37.874" starttime="20180306 13:57:25.092"></status>
+</kw>
+<kw name="Search Application On Google">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>D:\\W-Tester2\\testcase\\UnitTest\\UnitRobot/js_to_execute.js</arg>
+</arguments>
+<msg timestamp="20180306 13:57:37.876" html="yes" level="INFO">Reading JavaScript from file &lt;a href="file://%s"&gt;%s&lt;/a&gt;.</msg>
+<msg timestamp="20180306 13:57:37.877" level="INFO">Executing JavaScript:
+var timer_index = 0;
+var timer_timeset = 10000;
+function myLoop (){
+	var timeder_id = setTimeout(function(){
+	timer_index++;
+	timer_timeset=10000;
+	if (timer_index == 1) {
+		tw_menu_label_2.click();
+	}else if(timer_index == 2){
+		tw_menu_label_5.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 3){
+		tw_menu_label_6.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 4){
+		tw_menu_label_7.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 5){
+		tw_menu_label_8.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 6){
+		tw_menu_label_9.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 7){
+		tw_menu_label_10.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 8){
+		tw_menu_label_11.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 9){
+		tw_menu_label_12.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 10){
+		tw_menu_label_14.click();
+	}else if(timer_index == 11){
+		tw_menu_label_16.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+		timer_timeset=5000;
+	}else if(timer_index == 12){
+		tw_menu_label_18.click();
+		tab_main.getFrame(tab_main.getSelectedTabIndex()).getObj('btn_sch').trigger('onclick');
+	}else if(timer_index == 13){
+		tw_menu_label_20.click();
+	}else if(timer_index == 14){
+		tw_menu_label_21.click();
+	}else if(timer_index == 15){
+		tw_menu_label_22.click();
+	}else if(timer_index == 16){
+		timer_index=0;
+		anc_tabClose.click();
+	}myLoop();
+	}, timer_timeset)
+}myLoop();</msg>
+<status status="PASS" endtime="20180306 13:57:37.897" starttime="20180306 13:57:37.876"></status>
+</kw>
+<status status="PASS" endtime="20180306 13:57:37.898" starttime="20180306 13:57:37.875"></status>
+</kw>
+<status status="PASS" endtime="20180306 13:57:37.899" critical="yes" starttime="20180306 13:57:25.088"></status>
+</test>
+<status status="PASS" endtime="20180306 13:57:37.904" starttime="20180306 13:57:16.158"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Wframe All" pass="1">Wframe All</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180306 13:57:25.077" level="ERROR">Error in file 'D:\W-Tester2\testcase\UnitTest\UnitRobot\wframe_all.robot': Importing test library 'D:\W-Tester2\testcase\UnitTest\UnitRobot\w-browsercore2.py' failed: NameError: name 'GET' is not defined
+Traceback (most recent call last):
+  File "D:\W-Tester2\testcase\UnitTest\UnitRobot\w-browsercore2.py", line 13, in &lt;module&gt;
+    driver.get_network_conditions(GET, '/session/:sessionId/chromium/network_conditions')
+PYTHONPATH:
+  c:\python27\lib\site-packages\robotframework_browsermobproxylibrary-0.1.2-py2.7.egg
+  c:\python27\lib\site-packages\browsermob_proxy-0.8.0-py2.7.egg
+  c:\python27\lib\site-packages\requests-2.18.4-py2.7.egg
+  c:\python27\lib\site-packages\urllib3-1.22-py2.7.egg
+  c:\python27\lib\site-packages\idna-2.6-py2.7.egg
+  c:\python27\lib\site-packages\chardet-3.0.4-py2.7.egg
+  C:\Windows\system32\python27.zip
+  c:\python27\DLLs
+  c:\python27\lib
+  c:\python27\lib\plat-win
+  c:\python27\lib\lib-tk
+  c:\python27
+  c:\python27\lib\site-packages</msg>
+</errors>
+</robot>

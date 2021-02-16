@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <script src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+		debugger;
+            var HREF = location.href.substring(0, 21);
+
+            $("#reportviewfr").attr("src", HREF + "/result/" + $("#reportselect:first").val() + "/report.html");
+            $("#harviewfr").attr("src", HREF + "/html/harviewer/index.html?path=/network/har/file.har");
+            $("#chartfr").attr("src", HREF + "/html/test.html");
+
+            $("#reportselect").change(function () {
+                var reportmove = $("#reportselect option:selected").val();
+                $("#reportviewfr").attr("src", HREF + "/result/" + reportmove + "/report.html");
+            });
+
+            $("#har").click(function () {
+                $("#har").attr("href", HREF + "/html/harviewer/index.html?path=/network/har/file.har");
+            });
+        });
+
+    </script>
+</head>	
+<body>
+<h1>Test Platform for RobotFramework</h1>
+<fieldset>
+    <div>
+        <div class="menuselect">
+            <h3>ReportView</h3>
+            <select name="reportselect" id="reportselect">
+                <% for(var i = 0; i < test.length; i++) { %>
+                <option value="<%= test[i] %>">
+                    <%= test[i] %>
+                </option>
+                <% } %>
+            </select>
+        </div>
+        <div class="menuselect">
+            <h3>HarView</h3>
+            <select name="harselect" id="harselect">
+                <option value="MoveharViewer">MoveharViewer</option>
+            </select>
+        </div>
+        <div class="menuselect">
+            <h3>chartView</h3>
+            <select name="chartselect" id="harselect">
+                <option value="chartViewer">chartViewer</option>
+            </select>
+        </div>
+    </div>
+</fieldset>
+</br>
+<div id="repdiv" style="height: 300px;">
+    <iframe id="reportviewfr" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+</br>
+<div id="hardiv" style="height: 300px;">
+    <iframe id="harviewfr" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+</br>
+<div id="chartdiv" style="height: 300px;">
+    <iframe id="chartfr" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+</br>
+</body>
+</html>
